@@ -1,0 +1,15 @@
+[package]
+name = "xor-mailer"
+authors = ["XOR·APPS <developers@xorapps.cloud>"]
+version = "0.2.0"
+edition = "2021"
+license = "MPL-2.0"
+description = "A mailing service made to be easy and secure"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mail-send = { git = "https://github.com/xorapps/mail-send" }
+serde = { version = "1.0.152", features = ["derive"] }
+tokio = { version = "1.25.0", features = ["full"] }
+toml = "0.7.2"
