@@ -1,18 +1,21 @@
 use crate::{Envelope, MailerConfig};
 use mail_send::{mail_builder::MessageBuilder, SmtpClientBuilder};
 
-#[derive(Debug, Default)]
-pub struct Mailer {
-    config: MailerConfig,
+#[derive(Debug)]
+pub struct Mailer<'x> {
+    config: &'x MailerConfig,
     mail: Envelope,
 }
 
-impl Mailer {
-    pub fn new() -> Self {
-        Mailer::default()
+impl<'x> Mailer<'x> {
+    pub fn new(config: &'x MailerConfig) -> Self {
+        Mailer {
+            config,
+            mail: Envelope::default(),
+        }
     }
 
-    pub fn add_config(mut self, config: MailerConfig) -> Self {
+    pub fn add_config(&mut self, config: &'x MailerConfig) -> &mut Self {
         self.config = config;
 
         self
