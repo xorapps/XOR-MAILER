@@ -1,6 +1,7 @@
 use crate::BinaryAttachment;
+use borsh::{BorshSerialize, BorshDeserialize};
 
-#[derive(Debug, Default)]
+#[derive(Debug, Default, BorshSerialize, BorshDeserialize)]
 pub struct Envelope {
     to: Vec<(String, String)>,
     subject: String,

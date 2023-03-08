@@ -1,4 +1,6 @@
-#[derive(Debug, Default)]
+use borsh::{BorshDeserialize, BorshSerialize};
+
+#[derive(Debug, Default, BorshSerialize, BorshDeserialize)]
 pub struct BinaryAttachment {
     content_type: String,
     file_name: String,

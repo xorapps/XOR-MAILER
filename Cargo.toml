@@ -9,6 +9,7 @@ description = "A mailing service made to be easy and secure"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+borsh = "0.9.3"
 mail-send = { git = "https://github.com/xorapps/mail-send" }
 serde = { version = "1.0.152", features = ["derive"] }
 tokio = { version = "1.25.0", features = ["full"] }
