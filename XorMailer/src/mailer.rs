@@ -1,5 +1,6 @@
-use crate::{Envelope, MailerConfig};
+use crate::MailerConfig;
 use mail_send::{mail_builder::MessageBuilder, SmtpClientBuilder};
+use xor_mailer_common::Envelope;
 
 #[derive(Debug)]
 pub struct Mailer<'x> {

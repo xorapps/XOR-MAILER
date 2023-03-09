@@ -1,0 +1,12 @@
+[package]
+name = "xor-mailer-common"
+authors = ["XOR·APPS <developers@xorapps.network>"]
+version = "0.2.0"
+edition = "2021"
+license = "MPL-2.0"
+description = "Common data structures for xor-mailer"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+borsh = "0.9.3"

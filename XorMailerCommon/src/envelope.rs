@@ -1,5 +1,5 @@
 use crate::BinaryAttachment;
-use borsh::{BorshSerialize, BorshDeserialize};
+use borsh::{BorshDeserialize, BorshSerialize};
 
 #[derive(Debug, Default, BorshSerialize, BorshDeserialize)]
 pub struct Envelope {
